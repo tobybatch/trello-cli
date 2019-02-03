@@ -20,7 +20,7 @@ var __ = function(program, output, logger, config, trello, translator) {
       for (var i in data) {
         var item = data[i];
         cards[item.idBoard] = cards[item.idBoard] || [];
-        cards[item.idBoard].push(item.name.replace(/\n/g, ""));
+        cards[item.idBoard].push(" (" + item.idShort + ") " + item.name.replace(/\n/g, ""));
       }
 
       for (var j in cards) {
